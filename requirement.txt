@@ -1,4 +1,7 @@
 streamlit
 torch
 transformers
+ViTImageProcessor
+ViTForImageClassification
+PIL
 Image
