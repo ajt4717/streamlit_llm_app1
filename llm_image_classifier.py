@@ -1,5 +1,5 @@
 import streamlit as st
-#import torch
+import torch
 #from transformers import ViTImageProcessor, ViTForImageClassification
 import transformers as tf
 #from PIL import Image
@@ -29,7 +29,7 @@ def classify(image,processor,model):
 st.title("Hugging face image classifier google/vit-base-patch16-224")
 uploaded_file = st.file_uploader("upload image",type=["jpg","png","jpeg"])
 #path error resolution - Tried to instantiate class '__path__._path', but it does not exist! Ensure that it is registered via torch::class_
-#torch.classes.__path__ = []
+torch.classes.__path__ = []
 
 if uploaded_file:
     #get image

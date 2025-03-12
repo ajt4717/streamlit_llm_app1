@@ -1,3 +1,4 @@
-transformers
-PIL
 streamlit
+torch
+transformers
+Pillow
