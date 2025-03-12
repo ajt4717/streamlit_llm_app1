@@ -1,6 +1,6 @@
 streamlit
-torch
--f https://data.pyg.org/whl/torch-1.13.0+cpu.html
+torch==1.10.0
+torchvision==0.11.1
 torch-scatter
 transformers
 PIL
