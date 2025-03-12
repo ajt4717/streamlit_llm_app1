@@ -1,4 +1,4 @@
 streamlit
-pytorch
+torchvision
 transformers
 PIL
