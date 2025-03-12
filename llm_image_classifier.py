@@ -1,9 +1,9 @@
 import streamlit as st
-#from transformers import ViTImageProcessor, ViTForImageClassification
-import ViTImageProcessor, ViTForImageClassification
+from transformers import ViTImageProcessor, ViTForImageClassification
+#import ViTImageProcessor, ViTForImageClassification
 import torch
-#from PIL import Image
-import Image
+from PIL import Image
+#import Image
 
 #load model and processor
 @st.cache_resource
