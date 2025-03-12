@@ -1,16 +1,16 @@
 import streamlit as st
-from transformers import ViTImageProcessor, ViTForImageClassification
-#import ViTImageProcessor, ViTForImageClassification
 import torch
-from PIL import Image
-#import Image
+#from transformers import ViTImageProcessor, ViTForImageClassification
+import transformers as tf
+#from PIL import Image
+import PIL as pil
 
 #load model and processor
 @st.cache_resource
 def load_model():
     model_name = "google/vit-base-patch16-224"
-    processor = ViTImageProcessor.from_pretrained(model_name)
-    model = ViTForImageClassification.from_pretrained(model_name)
+    processor = tf.ViTImageProcessor.from_pretrained(model_name)
+    model = tf.ViTForImageClassification.from_pretrained(model_name)
     return processor,model
 
 
@@ -33,7 +33,7 @@ torch.classes.__path__ = []
 
 if uploaded_file:
     #get image
-    image = Image.open(uploaded_file).convert("RGB")
+    image = pil.Image.open(uploaded_file).convert("RGB")
     st.image(image,caption="uploaded image",use_container_width=True)
 
     #call prediction functions
